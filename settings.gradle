@@ -1,0 +1,11 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://www.myget.org/F/abtsoftware-bleeding-edge/maven' }
+        maven { url 'https://www.myget.org/F/abtsoftware/maven' }
+    }
+}
+rootProject.name = "Numerical Tasks Solver"
+include ':app'

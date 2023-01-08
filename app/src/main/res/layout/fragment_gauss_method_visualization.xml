@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp">
+
+    <TextView
+        android:id="@+id/remove_all_graphics_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Remove all graphics"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/layout_with_gauss_method_btns_diagonal"
+        app:layout_constraintStart_toEndOf="@id/layout_with_gauss_method_btns"
+        app:layout_constraintTop_toBottomOf="@id/remove_all_graphics_btn">
+
+        <TextView
+            android:id="@+id/classic_gauss_method_btn_diagonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Classic with diagonal"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/gauss_method_with_complete_pivoting_btn_diagonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/design_default_color_error"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textSize="10sp"
+            android:text="Complete with diagonal"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/gauss_method_with_pivoting_by_row_btn_diagonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="10sp"
+            android:background="@color/design_default_color_primary"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Row pivoting with diagonal"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gauss_method_with_pivoting_by_column_btn_diagonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/material_dynamic_primary40"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="8dp"
+            android:text="Column pivoting with diagonal"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:id="@+id/layout_with_gauss_method_btns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/remove_all_graphics_btn">
+
+        <TextView
+            android:id="@+id/classic_gauss_method_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Classic Gauss method"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/gauss_method_with_complete_pivoting_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/design_default_color_error"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textSize="10sp"
+            android:text="Gauss method with complete pivoting"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/gauss_method_with_pivoting_by_row_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="10sp"
+            android:background="@color/design_default_color_primary"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Gauss method with pivoting by row"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gauss_method_with_pivoting_by_column_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/material_dynamic_primary40"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="8dp"
+            android:text="Gauss method with pivoting by column"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_with_gauss_method_btns" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
